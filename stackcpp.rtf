@@ -1,0 +1,75 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 int stack::push(const journal_entry & to_add)\
+ 10 \{\
+ 11 \
+ 12 \
+ 13 \
+ 14     if(!head)\
+ 15 \
+ 16     \{\
+ 17 \
+ 18         node * temp = new node;\
+ 19         temp -> entries = new journal_entry[MAX];\
+ 20         head = temp;\
+ 21         temp -> next = NULL;\
+ 22         temp -> entries[0].copy_entry(to_add);\
+ 23 \
+ 24         ++top_index;\
+ 25 \
+ 26     \}\
+ 27 \
+ 28 \
+ 29 \
+ 30     if(top_index == MAX)\
+ 31     \{\
+ 32 \
+ 33         node * temp1 = new node;\
+ 34         temp1 -> entries = new journal_entry[MAX];\
+ 35         temp1 -> next = head;\
+ 36         temp1 = head;\
+ 37         temp1 -> entries[top_index].copy_entry(to_add);\
+ 38 \
+ 39         ++top_index;\
+ 40 \
+ 41 \
+ 42     \}\
+ 43 \
+ 44 \
+ 45 \
+ 46 \}\
+51 //Remove the top of stack\
+ 52 int stack::pop (void)\
+ 53 \{\
+ 54 \
+ 55             //Implement the function here\
+ 56     if(!head)\
+ 57         return 0;\
+ 58     node * hold = head -> next;\
+ 59 \
+ 60     if(!top_index)\
+ 61     \{\
+ 62 \
+ 63         delete [] head -> entries;\
+ 64         delete head;\
+ 65         head = hold;\
+ 66         top_index = MAX;\
+ 67 \
+ 68 \
+ 69       --top_index;\
+ 70    return 1;\
+ 71     \}\
+ 72 \
+ 73 \
+ 74 \
+ 75 \
+ 76    // delete [] entries;\
+ 77 \
+ 78 \
+ 79 \
+ 80 \}\
+}

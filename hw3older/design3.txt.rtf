@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 BookAntiqua;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww24200\viewh11580\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Sid-Ali Abdullahi\
+CS 163: Data Structures \
+Design Write-up\
+\
+\
+\pard\pardeftab720
+
+\f1\fs36 \cf0 \
+ 
+\b \'95 Answer the following questions in your design write-up: 
+\b0 \
+\pard\pardeftab720
+
+\b \cf0 1) How well did the data structure selected perform for the assigned application? 
+\b0 \
+
+\b 2) Would a different data structure work better? If so, which one and why... 
+\b0 \
+
+\b 3) What was efficient about your design and use of the data structure? 
+\b0 \
+
+\b 4) What was not efficient? 
+\b0 \
+
+\b 5) What would you do differently if you had more time to solve the problem? 
+\b0 \
+\'95 \
+\
+ 
+\fs24 The purpose of this program was to simulate a having a car stereo system in which the person could choose the song from a generated playlist by simply saying a few words of the songs title and or album of the artist, which will bring a result of all the possible matches conducted by the search of the program. The purpose of the program is to allow the user to select a song with relative ease by only utilizing a few words of the song title to select a particular one from the playlist. The core of this program consists of a hash table abstraction which implements the feature named perviously. The hash table is a key value oriented abstraction which takes a value in this case a song title or part of a title, then matches a mapping to the provided name to an index which contains similar songs that have the same words in the title. The data structure chosen in this case the is an array of head pointers where each pointer point to the beginning of a linear linked list. This data structure seems to be a great option for such an abstraction due to its many benefits of memory conservation, direct search and access and the ability to distribute data across the chains of the linear linked list. Im not aware of an alternative data structure that would work better in this case, i am assuming since we were taught about arrays of head pointers to implement for this data structure i am assuming this is a good fit for the application being implemented. The structure being used seems to be doing fine at preforming the required duties of the program, i don\'92t see a better alternative data structure that would improve the performance of this program. My program was efficient at obtain a value from the user and mapping to the right location based on the input provided by the user. Some parts of the program such as the add function need a little revision and can be improved in order to have the program running better. The overall design and implementation of the program was based on the outline provided in the program details, such as the table class abstraction which was provided by professor Fant, which helped identify which functions that would be available to the user and the type of functionality they would provide in simulating the work needed to be done by the ADT. What was not efficient about my program was the use of multiple dynamically allocated characters to store the contents the user specified, i feel as if there is a more efficient way to store the data being passed in then have a long list of parameters being passed in to the functions. I didn\'92t know a better approach to complete the functions without having so many arguments being passed in one for each entity from the user. I think that is bad practice and i will improve on the modularity and simplification of the functions through more reading and asking questions to the tutors. If i had more time to solve this problem i would research more about hash tables and their ways to implement them more efficiently than i did here in this program. I would also try to cut done on the long arguments being passed in to the functions through strategic planning of the function designs and how the data is passed around through out the program.
+\fs36 \
+}

@@ -1,0 +1,103 @@
+#include "bst.h"
+
+using namespace std;
+
+
+
+table::table()
+{
+    root = NULL;
+
+}
+
+table::~table()
+{
+
+    destroy(root);
+
+}
+
+int table::destroy(node * & root)
+{
+	if (!root) return 0;
+	
+	else
+	{
+		destroy(root->left);
+		destroy(root->right);
+		delete root;
+		root = NULL;
+		return 1;
+	}
+}
+
+
+
+
+
+int table::insert(node * & root_2, char key [], nominee & to_add)
+{
+
+	if (!root_2)
+	{
+		root_2 = new node;
+		root_2 -> data.name = new char[strlen(key) +1];
+		strcpy(root -> data.name,key); 
+		root_2 -> left = root_2 -> right = NULL;
+		
+	}
+	
+	else if (root_2->data.name >= key)//
+		insert(root_2->left, key, to_add);
+	else
+		insert(root_2->right, key, to_add);
+	return 1;
+	
+
+}
+
+
+int table::add(nominee & to_add, char key [])
+{
+
+
+    insert(root,key, to_add);
+
+
+
+}
+
+
+
+
+
+
+int table::displayall(node * root_2)
+{
+	if (!root_2)
+		return 0;
+	displayall(root_2->left)+displayall(root_2->right);
+	cout << root_2 -> data.name <<endl;
+	return 1;
+
+}
+
+
+
+int table::displayall()
+{
+
+
+    displayall(root);
+
+
+}
+
+
+
+
+
+
+
+
+

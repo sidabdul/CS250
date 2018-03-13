@@ -1,0 +1,91 @@
+#include "bst.h"
+
+using namespace std;
+
+int main()
+{
+
+
+table bst;
+nominee an;
+
+
+
+
+char test[20];
+
+
+
+//char test2[] = {"JOE"};
+//char test3[] = {"FRANC"};
+
+char choice;
+
+do{
+
+cout << "Enter in a nominee name " <<endl;
+//cin >> test;
+	cin.get(test, 20, '\n');
+			cin.ignore(20,'\n');
+
+
+bst.add(an, test);
+
+
+
+
+
+cout << " Would you like to add another nominee ? "<<endl;
+        cin >> choice;
+        cin.ignore(3,'\n');
+
+
+
+
+
+
+
+
+ } while (toupper(choice)=='Y');
+
+
+
+
+
+
+
+//bst.add(an, test2);
+
+//bst.add(an, test3);
+
+cout << "Here are the nominees : " <<endl;
+bst.displayall();
+
+
+char remove[15];
+
+cout << "Enter a nominee to remove : " <<endl;
+cin >> remove;
+cin.ignore(15,'\n');
+
+
+
+bst.remove(remove);
+
+
+
+
+
+cout << " The nominees after deletion : " <<endl;
+bst.displayall();
+
+
+
+
+
+
+
+
+return 0;
+
+}

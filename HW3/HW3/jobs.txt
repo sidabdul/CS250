@@ -1,0 +1,7 @@
+HP|Concord,California|Software Engineer|Working in a group to deisgn software|5+ years in Software Development |DOE
+Samsung|Chandler, Arizona|IT Consultant|Providing consultation to various clients about IT infrastructure|10+ years, MS preferred|98K
+Apple|Palo alto|Hardware Tester|Testing of circuits and embedded systems to meet specifications|5+ years in testing environment|66K
+Microsoft|Seattle, Washington|C Programmer|Manage and create projects in a team environment using C language|5+ years in C/C++ and/or Java|59k
+Google|Bend, Oregon|Linux Engineer|Develop various software projects using linux environment|6+ years in linux development|72K
+Cisco|Lake Oswego, Oregon|Network Engineer|Work with a team to design network structures for clients|7+ years in networking/IT|74K
+Sprint|Portland, Oregon|IT Manager|Will manage the network and data center assignments within the company and supervise other engineers|10+ years IT|100k
